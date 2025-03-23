@@ -1,0 +1,43 @@
+.nlm{
+    display: inline-block;
+}
+.nlm button{
+    border: none;
+    color:white;
+    background-color: hsla(9, 82%, 83%, 0.797);
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+/* .nlm:hover{
+    background-color: rgba(205, 98, 79, 0.847);
+
+} */
+
+.content a {
+    display: block;
+    color:black;
+    text-decoration: none;
+    padding: 5px 5px;
+  
+}
+
+.content{
+    display: none;
+    background-color: rgb(214, 233, 250);
+    position: absolute;
+    min-width: 80px;
+    box-shadow: 3px 3px 5px hsla(13, 97%, 62%, 0.414);
+}
+
+.nlm:hover .content{
+    display: block;
+}
+
+.nlm button:hover{
+    background-color: hsl(13, 79%, 76%);
+}
+
+.content a:hover{
+    background-color: rgb(153, 205, 250);
+}

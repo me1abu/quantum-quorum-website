@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9f1166ecbb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>QuantumQuorum | A physics society</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div><a href="" class="qq">QuantumQuorum</a></div>
+            <ul class="navitems">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+            </ul>
+            <a href="joinus.html" class="join_us">Join Us</a>
+            <div class="bar_btn">
+                <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255)"></i>
+            </div>
+        </div>
+
+        <div class="drop_dn">
+            <ul class="drop_items">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="joinus.html" class="join_us">Join Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="hm_image">
+            <div class="txt">
+                <h2>WELCOME TO QUANTUM QUORUM</h2>
+                <p>A physics society dedicated to exploring the physics of the physical world</p>
+            </div>
+        </div>
+        <div class="content">
+            <mainsetion class="sec">
+                <h3><bold> About the society</bold></h3>
+                <p>
+                 QUANTUM QUORUM is the official physics society of GTBIT founded with a vision to ignite curiosity and foster a passion of science among students .The society hosts events that teach the students about physics in a playful manner, the members of society aims to ignite curiosity among students for the subject by making various projects , launching newsletter, and giving a scope of research. <br> <br></p>
+            </mainsetion>
+            <sidesection class="side">
+                <h3>Latest</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">Article :Lorem ipsum dolor sit amet consectetur adipisicing eli</a></li>
+                    <li><a href="#">Article : Lorem ipsum dolor sit amet.</a> </li>
+                    <li><a href="#">Article : Lorem ipsum dolor sit.</a></li>
+                </ul>
+            </sidesection>
+        </div>
+
+        <div class="eventimages">
+            <h3> Events Gallery</h3>
+            <ul>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0007.jpg" alt=""></a></li>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0008.jpg" alt=""></a></li>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0009.jpg" alt=""></a></li>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0010.jpg" alt=""></a></li>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0011.jpg" alt=""></a></li>
+                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0012.jpg" alt=""></a></li>
+                
+            </ul>
+        </div>
+
+        <!-- <div class="calltoaction">
+            <img src="images/calltoaction_qq.png" alt="">
+            <div class="joinustext">
+                <h3>Become a Physics Fellow</h3>
+                <p>Imagine sharing the wonders of the universe, from the elegance of Newton's laws to the mysteries of quantum mechanics. Join us in igniting curiosity.</p>
+                <a href="joinus.html" class="join_us">Join Us</a>
+            </div>
+        </div> -->
+    </main>
+    <!-- <footer>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        
+        &copy; 2025 Quantum Quorum
+
+    </footer> -->
+    <script>
+        const bar_btn = document.querySelector('.bar_btn');
+        const bar_btn_i = document.querySelector('.bar_btn i');
+        const drop_dn = document.querySelector('.drop_dn');
+        bar_btn.onclick = function () {
+            drop_dn.classList.toggle('open')
+        }
+    </script>
+</body>
+
+</html>
