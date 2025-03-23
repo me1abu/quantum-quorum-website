@@ -3,10 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="form-style.css">
+    <title>Society Joining Form | QQ</title>
 </head>
 <body>
-    <h1 style="color: aliceblue;">Society Joining Form</h1>
+    <section>
+        <a href="index.html">Home</a>
+        <h1>Society Joining Form</h1>
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Join us</legend>
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="enrolment-number">Enrolment Number:</label>
+                    <input type="number" name="enrolment-number" id="enrolment-number" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="phone-number">Phone number:</label>
+                    <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{10}" autocomplete="on" required>
+                </p>
+                <p>
+                    <label for="branch">Branch:</label>
+                    <select name="branch" id="branch">
+                        <option value="cse">CSE</option>
+                        <option value="cse-ds">CSE-DS</option>
+                        <option value="cse-aiml">CSE-AIML</option>
+                        <option value="it">IT</option>
+                        <option value="ece">ECE</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="year">Year:</label>
+                    <select name="year" id="year">
+                        <option value="1st">1st</option>
+                        <option value="2nd">2nd</option>
+                        <option value="3rd">3rd</option>
+                        <option value="4th">4th</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="reason-of-joining">Why do you want to join Quantum Quorum?</label>
+                    <br>
+                    <textarea name="reason-of-joining" id="reason-of-joining"  rows="5" cols="50" placeholder="type your message here"></textarea>
+                </p>
+                <legend>Areas of Interest:</legend>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="theoretical-physics" value="theoretical-physics">
+                    <label for="theoretical-physics">Theoretical Physics</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="experimental-physics" value="experimental-physics">
+                    <label for="experimental-physics">Experimental Physics</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="webDev-and-tech" value="webDev-and-tech">
+                    <label for="webDev-and-tech">Web Development and Tech</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="event-management" value="event-management">
+                    <label for="event-management">Event Management</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="content-writing" value="content-writing">
+                    <label for="content-writing">Content Writing</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="areas-of-interest" id="graphic-design" value="graphic-design">
+                    <label for="graphic-design">Graphic Design</label>
+                </p>
+                <p>
+                    <label for="experience">Any relevant experience or projects?</label>
+                    <br>
+                    <textarea name="experience" id="experience"  rows="10" cols="60" placeholder="type your message here"></textarea>
+                </p>
+                <p>
+                    <label for="time-dedication">How much time (in hours) can you dedicate per week to the society?</label>
+                    <input type="number" name="time-dedication" id="time-dedication" min="1" max="40" step="1"  placeholder="e.g. 5" required>
+                </p>
+            </fieldset>
+            <br>
+            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+    <p>
+        <a href="#">Back to Top</a>
+    </p> 
 </body>
 </html>
