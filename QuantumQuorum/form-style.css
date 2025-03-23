@@ -1,0 +1,24 @@
+html {
+    font-size: 22px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+input, textarea, select {
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+a {
+    color: hsl(280,100%,25%);
+}
+
