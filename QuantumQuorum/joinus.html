@@ -3,98 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form-style.css">
-    <title>Society Joining Form | Quantum Quorum</title>
+    <title>Quantum Quorum - Society Joining Form</title>
+    <style>
+        :root {
+            --primary: #3a0ca3;
+            --primary-light: #4361ee;
+            --secondary: #7209b7;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #38b000;
+            --error: #d00000;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        
+        .form-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-light);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+        }
+        
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            min-width: 200px;
+        }
+        
+        .checkbox-option label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        button[type="submit"] {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="reset"] {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            border: 1px solid #ddd;
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #e9ecef;
+        }
+        
+        .required::after {
+            content: " *";
+            color: var(--error);
+        }
+        
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-light) 0%, var(--accent) 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .form-container {
+                padding: 15px;
+            }
+            
+            .checkbox-option {
+                min-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <a href="index.html">Home</a>
-        <h1>Society Joining Form</h1>
-        <form action="https://httpbin.org/get" method="get">
-            <fieldset>
-                <legend>Join us</legend>
-                <p>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" autocomplete="on" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" autocomplete="on" required>
-                </p>
-                <p>
-                    <label for="enrolment-number">Enrolment Number:</label>
-                    <input type="number" name="enrolment-number" id="enrolment-number" autocomplete="on" required>
-                </p>
-                <p>
-                    <label for="phone-number">Phone number:</label>
-                    <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{10}" autocomplete="on" required>
-                </p>
-                <p>
-                    <label for="branch">Branch:</label>
-                    <select name="branch" id="branch">
-                        <option value="cse">CSE</option>
-                        <option value="cse-ds">CSE-DS</option>
-                        <option value="cse-aiml">CSE-AIML</option>
-                        <option value="it">IT</option>
-                        <option value="ece">ECE</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="year">Year:</label>
-                    <select name="year" id="year">
-                        <option value="1st">1st</option>
-                        <option value="2nd">2nd</option>
-                        <option value="3rd">3rd</option>
-                        <option value="4th">4th</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="reason-of-joining">Why do you want to join Quantum Quorum?</label>
-                    <br>
-                    <textarea name="reason-of-joining" id="reason-of-joining"  rows="5" cols="50" placeholder="type your message here"></textarea>
-                </p>
-                <legend>Areas of Interest:</legend>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="theoretical-physics" value="theoretical-physics">
-                    <label for="theoretical-physics">Theoretical Physics</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="experimental-physics" value="experimental-physics">
-                    <label for="experimental-physics">Experimental Physics</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="webDev-and-tech" value="webDev-and-tech">
-                    <label for="webDev-and-tech">Web Development and Tech</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="event-management" value="event-management">
-                    <label for="event-management">Event Management</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="content-writing" value="content-writing">
-                    <label for="content-writing">Content Writing</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="areas-of-interest" id="graphic-design" value="graphic-design">
-                    <label for="graphic-design">Graphic Design</label>
-                </p>
-                <p>
-                    <label for="experience">Any relevant experience or projects?</label>
-                    <br>
-                    <textarea name="experience" id="experience"  rows="10" cols="60" placeholder="type your message here"></textarea>
-                </p>
-                <p>
-                    <label for="time-dedication">How much time (in hours) can you dedicate per week to the society?</label>
-                    <input type="number" name="time-dedication" id="time-dedication" min="1" max="40" step="1"  placeholder="e.g. 5" required>
-                </p>
-            </fieldset>
-            <br>
-            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
-    </section>
-    <p>
-        <a href="#">Back to Top</a>
-    </p> 
+    <div class="container">
+        <header>
+            <h1>Quantum Quorum</h1>
+            <p>Physics & Technology Society</p>
+            <nav>
+                <a href="index.html">Back to Home</a>
+                <!-- <a href="#">About Us</a>
+                <a href="#">Events</a>
+                <a href="#">Contact</a> -->
+            </nav>
+        </header>
+        
+        <div class="form-container">
+            <div class="progress-container">
+                <h2>Society Joining Form</h2>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <p id="progress-text">0% complete</p>
+            </div>
+            
+            <form action="https://httpbin.org/post" method="post" id="joining-form">
+                <div class="form-section">
+                    <h2>Personal Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="name" class="required">Full Name</label>
+                        <input type="text" name="name" id="name" autocomplete="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="enrolment-number" class="required">Enrolment Number</label>
+                        <input type="number" name="enrolment-number" id="enrolment-number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone-number" class="required">Phone Number</label>
+                        <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{10}" placeholder="10-digit number" autocomplete="tel" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Academic Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="branch">Branch/Department</label>
+                        <select name="branch" id="branch">
+                            <option value="" disabled selected>Select your branch</option>
+                            <option value="cse">Computer Science Engineering (CSE)</option>
+                            <option value="cse-ds">CSE - Data Science</option>
+                            <option value="cse-aiml">CSE - AI & Machine Learning</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ece">Electronics & Communication</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year">Current Year</label>
+                        <select name="year" id="year">
+                            <option value="" disabled selected>Select your year</option>
+                            <option value="1st">1st Year</option>
+                            <option value="2nd">2nd Year</option>
+                            <option value="3rd">3rd Year</option>
+                            <option value="4th">4th Year</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Society Interest</h2>
+                    
+                    <div class="form-group">
+                        <label for="reason-of-joining">Why do you want to join Quantum Quorum?</label>
+                        <textarea name="reason-of-joining" id="reason-of-joining" rows="4" placeholder="Tell us why you're interested in joining our society..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Areas of Interest:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="theoretical-physics" value="theoretical-physics">
+                                <label for="theoretical-physics">Theoretical Physics</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="experimental-physics" value="experimental-physics">
+                                <label for="experimental-physics">Experimental Physics</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="webDev-and-tech" value="webDev-and-tech">
+                                <label for="webDev-and-tech">Web Development & Tech</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="event-management" value="event-management">
+                                <label for="event-management">Event Management</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="content-writing" value="content-writing">
+                                <label for="content-writing">Content Writing</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" name="areas-of-interest" id="graphic-design" value="graphic-design">
+                                <label for="graphic-design">Graphic Design</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Any relevant experience or projects?</label>
+                        <textarea name="experience" id="experience" rows="5" placeholder="Describe any previous experience or projects related to physics, technology, or other relevant areas..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time-dedication" class="required">Weekly Time Commitment (hours)</label>
+                        <input type="number" name="time-dedication" id="time-dedication" min="1" max="40" step="1" placeholder="e.g. 5" required>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </div>
+        
+        <footer>
+            <p>© 2025 Quantum Quorum - Physics & Technology Society</p>
+        </footer>
+    </div>
+    
+    <a href="#" class="back-to-top" id="back-to-top">↑</a>
+    
+    <script>
+        // Progress tracking
+        const form = document.getElementById('joining-form');
+        const requiredInputs = form.querySelectorAll('[required]');
+        const progressBar = document.getElementById('progress');
+        const progressText = document.getElementById('progress-text');
+        const totalRequired = requiredInputs.length;
+        
+        function updateProgress() {
+            let filledCount = 0;
+            requiredInputs.forEach(input => {
+                if (input.value.trim() !== '') {
+                    filledCount++;
+                }
+            });
+            
+            const percentage = Math.round((filledCount / totalRequired) * 100);
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = percentage + '% complete';
+        }
+        
+        requiredInputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

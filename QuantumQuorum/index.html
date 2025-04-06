@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9f1166ecbb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f1166ecbb.js" crossorigin="anonymous"></script>
+
     <title>QuantumQuorum | A physics society</title>
 </head>
 
@@ -14,11 +16,11 @@
         <div class="navbar">
             <div><img src="images/gtbit-logo.png" alt="image of gtbit logo" height="80" width="85" class="qq"></div>
             <ul class="navitems">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="publications.html">Publications</a></li>
             </ul>
             <a href="joinus.html" class="join_us">Join Us</a>
             <div class="bar_btn">
@@ -40,50 +42,148 @@
         <br>
     </header>
     <main>
-        <div class="hm_image">
-            <div class="txt">
-                <h2>WELCOME TO QUANTUM QUORUM</h2>
-                <p>A physics society dedicated to exploring the physics of the physical world</p>
-            </div>
+        <div class="sname">
+            <h1>QUANTUM QU<i class="fa-solid fa-atom"></i></i>RUM</h1>
+
         </div>
-        <div class="content">
-            <mainsetion class="sec">
-                <h3><bold> About the society</bold></h3>
-                <p>
-                 QUANTUM QUORUM is the official physics society of GTBIT founded with a vision to ignite curiosity and foster a passion of science among students .The society hosts events that teach the students about physics in a playful manner, the members of society aims to ignite curiosity among students for the subject by making various projects , launching newsletter, and giving a scope of research. <br> <br></p>
-            </mainsetion>
-            <sidesection class="side">
-                <h3>Latest</h3>
-                <hr>
-                <ul>
-                    <li><a href="#">Article :Lorem ipsum dolor sit amet consectetur adipisicing eli</a></li>
-                    <li><a href="#">Article : Lorem ipsum dolor sit amet.</a> </li>
-                    <li><a href="#">Article : Lorem ipsum dolor sit.</a></li>
-                </ul>
-            </sidesection>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/qq_hmp2.jpg" style="width:100%" class="cr_images">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/publication_qq.jpg" style="width:100%" class="cr_images">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/qq_hmp2.jpg" style="width:100%" class="cr_images">
+                <div class="text"></div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center" class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         </div>
 
-        <div class="eventimages">
-            <h3> Events Gallery</h3>
-            <ul>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0007.jpg" alt=""></a></li>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0008.jpg" alt=""></a></li>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0009.jpg" alt=""></a></li>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0010.jpg" alt=""></a></li>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0011.jpg" alt=""></a></li>
-                <li id="image"><a href=""><img src="event_images_homepage/IMG-20250119-WA0012.jpg" alt=""></a></li>
-                
-            </ul>
-        </div>
-
-        <!-- <div class="calltoaction">
-            <img src="images/calltoaction_qq.png" alt="">
-            <div class="joinustext">
-                <h3>Become a Physics Fellow</h3>
-                <p>Imagine sharing the wonders of the universe, from the elegance of Newton's laws to the mysteries of quantum mechanics. Join us in igniting curiosity.</p>
-                <a href="joinus.html" class="join_us">Join Us</a>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="tagline">Ignite your curiosity</p>
+                <h1 class="h1_hero">Join the physics revolution</h1>
+                <p class="description">
+                    QUANTUM QUORUM, the official physics society of GTBIT in New Delhi, is dedicated to sparking
+                    curiosity and fostering a passion for science among students. Through engaging events, interactive
+                    projects, and insightful newsletters, we aim to elevate the understanding of physics in a fun and
+                    playful manner.
+                </p>
+                <a href="#contact" class="cta-button">Get involved</a>
             </div>
-        </div> -->
+            <div class="hero-image"></div>
+        </section>
+
+        <section class="section features">
+            <h2 class="section-title">What We <span>Offer</span></h2>
+            <div class="features-container">
+                <a href="events.html">
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3 class="feature-title">Educational Workshops</h3>
+                        <p>Participate in hands-on workshops where complex physics concepts are broken down into
+                            understandable and engaging activities.</p>
+                    </div>
+                </a>
+                <a href="projects.html">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3 class="feature-title">Interactive Projects</h3>
+                        <p>Build physics-based models and simulations that demonstrate scientific principles in a fun
+                            and interactive way.</p>
+                    </div>
+                </a>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Competitions</h3>
+                    <p>Test your knowledge and problem-solving skills in physics competitions at both college and
+                        national levels.</p>
+                </div>
+                <a href="publications.html">
+                    <div class="feature-card">
+                        <div class="feature-icon">📰</div>
+                        <h3 class="feature-title">Physics Newsletter</h3>
+                        <p>Stay updated with the latest discoveries and advancements in the field through our monthly
+                            newsletter.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>GTBIT Campus, New Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>quantumquorum@gtbit.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+
     </main>
     <!-- <footer>
         <div class="icons">
@@ -94,14 +194,7 @@
         &copy; 2025 Quantum Quorum
 
     </footer> -->
-    <script>
-        const bar_btn = document.querySelector('.bar_btn');
-        const bar_btn_i = document.querySelector('.bar_btn i');
-        const drop_dn = document.querySelector('.drop_dn');
-        bar_btn.onclick = function () {
-            drop_dn.classList.toggle('open')
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
