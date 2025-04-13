@@ -583,6 +583,7 @@ div.sname {
   
   .pub-content {
     padding: 20px;
+    
   }
   
   .pub-content h4 {
@@ -594,6 +595,10 @@ div.sname {
     font-size: 14px;
     color: #ccc;
     margin-bottom: 15px;
+  }
+  .pub-content a{
+    text-decoration: none;
+
   }
   
   .learn-more {
