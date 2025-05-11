@@ -1379,7 +1379,3 @@ main .events .side_section{
     left: 0;
     color: #f8b400;
   }
-
-  .event-subtitle p {
-    font-size: 1.1rem;
-  }
