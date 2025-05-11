@@ -1379,3 +1379,7 @@ main .events .side_section{
     left: 0;
     color: #f8b400;
   }
+
+  .no-icon li::before {
+    content: none !important;
+  }
