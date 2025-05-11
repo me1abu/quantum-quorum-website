@@ -1269,3 +1269,117 @@ main .events .side_section{
         font-size: 1.3rem;
     }
 }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .image-grid img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  .event-detail {
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .event-title {
+    text-align: center;
+    color: #f8b400;
+  }
+  
+  .event-meta {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .event-section {
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .event-subtitle {
+    color: #00ffcc;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid #00ffcc;
+    padding-left: 10px;
+  }
+  
+  .event-list {
+    list-style-type: disc;
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  .center-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-top: 1rem;
+  }
+  
+  .event-section:last-of-type {
+    border-bottom: none;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #00ffcc;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60px;
+    background: #00ffcc;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .event-list li {
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    color: #ccc;
+    font-size: 1.1rem;
+  }
+  
+  .event-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: #f8b400;
+  }
+
+  .event-subtitle p {
+    font-size: 1.1rem;
+  }
