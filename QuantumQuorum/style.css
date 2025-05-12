@@ -1383,3 +1383,42 @@ main .events .side_section{
   .no-icon li::before {
     content: none !important;
   }
+
+  .winner-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .winner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .winner-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .winner-info {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .winner-group-photo img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
