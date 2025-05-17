@@ -589,6 +589,7 @@ div.sname {
   .pub-content h4 {
     margin: 0 0 10px;
     color: #00ffcc;
+    margin-bottom: 30px;
   }
   
   .pub-content p {
@@ -940,7 +941,8 @@ footer {
 .team-member img {
     width: 100%;
     max-width: 180px;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 10px;
 }
