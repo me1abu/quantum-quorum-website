@@ -429,6 +429,9 @@ div.sname {
     margin-bottom: 1rem;
     color: #333;
 }
+.feature-card p{
+    color: hsl(0, 0%, 20%);
+}
 
 /* Contact Section */
 .section {
