@@ -45,6 +45,8 @@ main {
 .navbar .qq {
     margin-left: 15px;
     background: transparent;
+    margin-top: 5px;
+    
 }
 
 .navbar .navitems {
@@ -182,6 +184,11 @@ div.sname {
     position: relative;
     margin: auto;
     width: 95%;
+}
+
+.mySlides {
+    height: auto;
+    /* max-height: 500px; */
 }
 
 /* Next & previous buttons */
