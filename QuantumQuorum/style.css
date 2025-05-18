@@ -755,9 +755,6 @@ div a {
     color: white;
 }
 
-/* hr{
-    border: 0.5px solid black;
-} */
 
 .side ul li a:hover {
     color: blue;
@@ -849,10 +846,10 @@ main .imagecontain {
     /* float: none; */
 }
 
-.eventimages ul li {
+/* .eventimages ul li {
     width: 40vw;
     height: auto;
-}
+} */
 
 /* .newsletterlist .articlecontainer p{ */
 /* float:right; */
@@ -1084,7 +1081,7 @@ footer {
 /* Event Button */
 .event-btn {
     display: inline-block;
-    margin-top: 10px;
+    margin-top:10px;
     padding: 8px 12px;
     background: #ff6b6b;
     color: #fff;

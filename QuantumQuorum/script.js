@@ -39,7 +39,7 @@ function showSlides(n) {
 function autoSlide() {
   slideIndex++;
   showSlides(slideIndex);
-  setTimeout(autoSlide, 4000); // change every 4 seconds
+  setTimeout(autoSlide, 5000); // change every 5 seconds
 }
 
 // Initialize
