@@ -45,6 +45,4 @@ Contact: [quantumquorum@gtbit.ac.in](mailto:quantumquorum@gtbit.ac.in)
 
 ---
 
-**Quantum Quorum**  
-Physics & Technology Society, GTBIT
 
