@@ -74,3 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// joinus btn
+function openJoinForm() {
+  document.getElementById('joinFormModal').style.display = 'flex';
+}
+function closeJoinForm() {
+  document.getElementById('joinFormModal').style.display = 'none';
+}

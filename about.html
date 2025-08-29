@@ -20,7 +20,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="publications.html" >Publications</a></li>
             </ul>
-            <a href="joinus.html" class="join_us">Join Us</a>
+            <a href="javascript:void(0);" onclick="openJoinForm()" class="join_us">Join Us</a>
             <div class="bar_btn">
                 <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255)"></i>
             </div>
@@ -33,7 +33,7 @@
                 <li><a href="events.html">Events</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="publications.html" class="active">Publications</a></li>
-                <li><a href="joinus.html" class="join_us">Join Us</a></li>
+                <li><a href="javascript:void(0);" onclick="openJoinForm()" class="join_us">Join Us</a></li>
             </ul>
         </div>
         <br>
@@ -46,12 +46,12 @@
             <!-- Top Team Members -->
             <div class="team-container">
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>Harshal Chauhan</p>
                     <h3>President</h3>
                 </div>
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>Sukhmeet Kaur</p>
                     <h3>Vice-President</h3>
                 </div>
@@ -99,16 +99,16 @@
                     <p>Mehraj</p>
                     <h3>Team Co-Head</h3>
                 </div> -->
-                <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                <!-- <div class="team-member">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
                 </div>
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
-                </div>
+                </div> -->
             </div>
 
             <!-- Graphics Team -->
@@ -124,41 +124,41 @@
                     <p>Ashish Jhakhmola</p>
                     <h3>Team Co-Head</h3>
                 </div>
-                <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                <!-- <div class="team-member">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
                 </div>
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
-                </div>
+                </div> -->
             </div>
 
             <!-- Event Management Team -->
             <h3 class="team-title">Event Management Team</h3>
             <div class="team-container">
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>Archita Garg</p>
                     <h3>Team Head</h3>
                 </div>
-                <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                <!-- <div class="team-member">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Co-Head</h3>
                 </div>
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
                 </div>
                 <div class="team-member">
-                    <img src="images/UC_webP.jpg" alt="John Doe">
+                    <img src="images/icons/dpp.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
-                </div>
+                </div> -->
             </div>
 
             <!-- Social Media Team -->
@@ -169,7 +169,7 @@
                     <p>Jiya Khera</p>
                     <h3>Team Head</h3>
                 </div>
-                <div class="team-member">
+                <!-- <div class="team-member">
                     <img src="images/UC_webP.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Co-Head</h3>
@@ -183,7 +183,7 @@
                     <img src="images/UC_webP.jpg" alt="John Doe">
                     <p>John Doe</p>
                     <h3>Team Member</h3>
-                </div>
+                </div> -->
 
             
         </section>
@@ -196,15 +196,17 @@
          </div>
 
     </main>
-    <!-- <footer>
-        <div class="icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <!-- joining form modal -->
+    <div id="joinFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeJoinForm()">&times;</span>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfFwrame9D2qG6U_K-Uxcuyat1eZaYbiCZlpvpcFUphXO7PfQ/viewform?embedded=true"
+                width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+                Loading…
+            </iframe>
         </div>
-        
-        &copy; 2025 Quantum Quorum
-
-    </footer> -->
+    </div>
     <script src="script.js"></script>
 </body>
 
